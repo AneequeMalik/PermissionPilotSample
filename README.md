@@ -6,7 +6,7 @@ PermissionPilot is a lifecycle-aware Android runtime permission library for Acti
 
 ### JitPack
 
-Publish the repository to GitHub, create a release tag such as `v0.1.0`, then add JitPack to the consuming app:
+Add JitPack to your project-level `settings.gradle.kts` file:
 
 ```kotlin
 dependencyResolutionManagement {
@@ -23,11 +23,12 @@ Add the dependency:
 
 ```kotlin
 dependencies {
-    implementation("com.github.aneeque:PermissionPilot:0.1.0")
+    implementation("com.github.AneequeMalik:PermissionPilotSample:v0.1.0")
 }
 ```
 
-If your GitHub owner or repository name is different, replace `aneeque` and `PermissionPilot` in the dependency coordinate.
+If your GitHub owner or repository name is different, replace `aneeque` and `PermissionPilot` 
+in the dependency coordinate.
 
 ### Local Maven
 
@@ -65,12 +66,13 @@ class MainActivity : ComponentActivity() {
         permissionPilot.requestPermission(
             permission = Manifest.permission.CAMERA,
             onGranted = {
-                // Use the camera.
+                // Permission granted. Use the camera.
             },
             onDenied = {
-                // Show rationale or retry option.
+                // Permission denied. Show rationale or retry option.
             },
             onPermanentlyDenied = {
+                // Permission permanently denied. Open app settings.
                 permissionPilot.openAppSettings()
             }
         )
@@ -85,6 +87,21 @@ class CameraFragment : Fragment() {
     private val permissionPilot by lazy {
         PermissionPilot.create(this)
     }
+
+    fun requestCamera() {
+        permissionPilot.requestPermission(
+            permission = Manifest.permission.CAMERA,
+            onGranted = {
+                // Permission granted.
+            },
+            onDenied = {
+                // Permission denied.
+            },
+            onPermanentlyDenied = {
+                permissionPilot.openAppSettings()
+            }
+        )
+    }
 }
 ```
 
@@ -97,38 +114,34 @@ fun CameraPermissionButton() {
         permission = Manifest.permission.CAMERA,
         onResult = { result ->
             when (result) {
-                is PermissionResult.Granted -> Unit
-                is PermissionResult.Denied -> Unit
-                is PermissionResult.PermanentlyDenied -> Unit
+                is PermissionResult.Granted -> {
+                    // Permission granted.
+                }
+
+                is PermissionResult.Denied -> {
+                    // Permission denied.
+                }
+
+                is PermissionResult.PermanentlyDenied -> {
+                    // Permission permanently denied.
+                }
             }
         }
     )
 
     Button(onClick = cameraPermission.launchRequest) {
-        Text("Request camera")
+        Text("Request Camera")
     }
 }
 ```
 
 ## Publishing
 
-Publication metadata lives in `gradle.properties`:
+Current JitPack artifact:
 
-```properties
-GROUP=com.aneeque
-POM_ARTIFACT_ID=permissionpilot
-VERSION_NAME=0.1.0
-POM_URL=https://github.com/aneeque/PermissionPilot
+```kotlin
+implementation("com.github.AneequeMalik:PermissionPilotSample:v0.1.0")
 ```
-
-Before releasing, update `VERSION_NAME`, make sure `POM_URL` matches the GitHub repository, and run:
-
-```bash
-./gradlew clean :permissionpilot:testReleaseUnitTest :permissionpilot:publishReleasePublicationToMavenLocal
-```
-
-For Maven Central, you will also need Sonatype Central Portal credentials and signing configuration.
-
 ## License
 
 MIT
