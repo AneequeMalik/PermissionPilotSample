@@ -1,0 +1,87 @@
+<resources>
+    <string name="app_name">PermissionPilot Demo</string>
+    <string name="compose_demo_title">Compose Demo</string>
+
+    <!-- Main Activity -->
+    <string name="section_single_permission">Single Permission</string>
+    <string name="section_multiple_permissions">Multiple Permissions</string>
+    <string name="section_fragment_demo">Fragment Demo</string>
+    <string name="btn_request_camera">Request Camera Permission</string>
+    <string name="btn_request_multiple">Request Camera + Audio</string>
+    <string name="btn_open_compose_demo">Open Compose Demo</string>
+    <string name="btn_open_settings">Open App Settings</string>
+    <string name="status_unknown">Status: Not requested</string>
+    <string name="status_granted">Permission Granted</string>
+    <string name="status_denied">Permission Denied</string>
+    <string name="status_permanently_denied">Permanently Denied — Open Settings</string>
+
+    <!-- Fragment -->
+    <string name="fragment_title">Fragment Permission Demo</string>
+    <string name="btn_request_location">Request Location Permission</string>
+
+    <!-- Permission Categories -->
+    <string name="category_camera_mic">Camera &amp; Microphone</string>
+    <string name="category_location">Location</string>
+    <string name="category_storage">Storage &amp; Media</string>
+    <string name="category_phone">Phone</string>
+    <string name="category_sms">SMS</string>
+    <string name="category_contacts">Contacts</string>
+    <string name="category_calendar">Calendar</string>
+    <string name="category_sensors">Body Sensors &amp; Activity</string>
+    <string name="category_bluetooth">Bluetooth</string>
+    <string name="category_notifications">Notifications</string>
+    <string name="category_nearby">Nearby Devices</string>
+
+    <!-- Permission Buttons -->
+    <string name="btn_camera">Camera</string>
+    <string name="btn_microphone">Microphone</string>
+    <string name="btn_camera_and_mic">Camera + Microphone</string>
+    <string name="btn_fine_location">Fine Location</string>
+    <string name="btn_coarse_location">Coarse Location</string>
+    <string name="btn_both_location">Fine + Coarse Location</string>
+    <string name="btn_background_location">Background Location</string>
+    <string name="btn_read_storage">Read Storage</string>
+    <string name="btn_write_storage">Write Storage</string>
+    <string name="btn_media_images">Media: Images</string>
+    <string name="btn_media_video">Media: Video</string>
+    <string name="btn_media_audio">Media: Audio</string>
+    <string name="btn_all_media">All Media (Images + Video + Audio)</string>
+    <string name="btn_call_phone">Make Phone Call</string>
+    <string name="btn_read_phone_state">Read Phone State</string>
+    <string name="btn_read_call_log">Read Call Log</string>
+    <string name="btn_all_phone">All Phone Permissions</string>
+    <string name="btn_send_sms">Send SMS</string>
+    <string name="btn_read_sms">Read SMS</string>
+    <string name="btn_receive_sms">Receive SMS</string>
+    <string name="btn_all_sms">All SMS Permissions</string>
+    <string name="btn_read_contacts">Read Contacts</string>
+    <string name="btn_write_contacts">Write Contacts</string>
+    <string name="btn_all_contacts">All Contacts</string>
+    <string name="btn_read_calendar">Read Calendar</string>
+    <string name="btn_write_calendar">Write Calendar</string>
+    <string name="btn_all_calendar">All Calendar</string>
+    <string name="btn_body_sensors">Body Sensors</string>
+    <string name="btn_activity_recognition">Activity Recognition</string>
+    <string name="btn_sensors_and_activity">Sensors + Activity</string>
+    <string name="btn_bluetooth_scan">Bluetooth Scan</string>
+    <string name="btn_bluetooth_connect">Bluetooth Connect</string>
+    <string name="btn_bluetooth_advertise">Bluetooth Advertise</string>
+    <string name="btn_all_bluetooth">All Bluetooth</string>
+    <string name="btn_post_notifications">Post Notifications</string>
+    <string name="btn_nearby_wifi">Nearby Wi-Fi Devices</string>
+
+    <!-- Rationale -->
+    <string name="rationale_title">Permission Required</string>
+    <string name="rationale_camera_message">Camera permission is required to take photos. Would you like to grant it?</string>
+    <string name="rationale_location_message">Location permission is required to show your position on the map.</string>
+    <string name="rationale_multiple_message">Camera and audio permissions are required for video recording.</string>
+    <string name="rationale_generic_message">This permission is needed for the requested feature to work correctly.</string>
+    <string name="rationale_proceed">Grant</string>
+    <string name="rationale_cancel">Cancel</string>
+
+    <!-- API level notes -->
+    <string name="note_api_29_below">Available on Android 10 (API 29) and below</string>
+    <string name="note_api_33_above">Available on Android 13 (API 33) and above</string>
+    <string name="note_api_31_above">Available on Android 12 (API 31) and above</string>
+    <string name="note_api_29_above">Available on Android 10 (API 29) and above</string>
+</resources>

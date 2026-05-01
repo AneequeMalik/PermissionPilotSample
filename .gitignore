@@ -1,0 +1,35 @@
+# Built application files
+*.apk
+*.aab
+
+# Gradle
+.gradle/
+build/
+*/build/
+
+# Local machine files
+local.properties
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+
+# Kotlin / Android generated
+.kotlin/
+.externalNativeBuild/
+.cxx/
+captures/
+
+# Antigravity / local generated folders
+.gradle-user-home/
+.android/
+.vscode/
+metrics/
+
+# Logs and archives
+*.log
+*.zip
+
+# OS files
+.DS_Store
+Thumbs.db

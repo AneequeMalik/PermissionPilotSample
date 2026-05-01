@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PermissionPilot"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="All Permissions Demo"
+            android:textSize="14sp"
+            android:textColor="@color/secondary"
+            android:layout_marginBottom="24dp" />
+
+        <!-- ════════ CAMERA & MIC ════════ -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            style="@style/Widget.Material3.CardView.Outlined">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="@string/category_camera_mic" android:textSize="18sp" android:textStyle="bold" android:layout_marginBottom="8dp"/>
+                <TextView android:id="@+id/tvCameraMicStatus" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="@string/status_unknown" android:textSize="14sp" android:padding="8dp" android:background="@color/card_background" android:layout_marginBottom="8dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnCamera" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_camera" android:layout_marginBottom="4dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnMicrophone" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_microphone" style="@style/Widget.Material3.Button.TonalButton" android:layout_marginBottom="4dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnCameraAndMic" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_camera_and_mic" style="@style/Widget.Material3.Button.OutlinedButton"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ════════ LOCATION ════════ -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            style="@style/Widget.Material3.CardView.Outlined">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/category_location" android:textSize="18sp" android:textStyle="bold" android:layout_marginBottom="8dp"/>
+                <TextView android:id="@+id/tvLocationStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/status_unknown" android:textSize="14sp" android:padding="8dp" android:background="@color/card_background" android:layout_marginBottom="8dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnFineLocation" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_fine_location" android:layout_marginBottom="4dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnCoarseLocation" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_coarse_location" style="@style/Widget.Material3.Button.TonalButton" android:layout_marginBottom="4dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnBothLocation" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_both_location" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_marginBottom="4dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnBackgroundLocation" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_background_location" style="@style/Widget.Material3.Button.OutlinedButton"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ════════ STORAGE & MEDIA ════════ -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            style="@style/Widget.Material3.CardView.Outlined">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/category_storage" android:textSize="18sp" android:textStyle="bold" android:layout_marginBottom="8dp"/>
+                <TextView android:id="@+id/tvStorageStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/status_unknown" android:textSize="14sp" android:padding="8dp" android:background="@color/card_background" android:layout_marginBottom="8dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnReadStorage" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_read_storage" android:layout_marginBottom="4dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnMediaImages" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_media_images" style="@style/Widget.Material3.Button.TonalButton" android:layout_marginBottom="4dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnMediaVideo" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_media_video" style="@style/Widget.Material3.Button.TonalButton" android:layout_marginBottom="4dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnMediaAudio" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_media_audio" style="@style/Widget.Material3.Button.TonalButton" android:layout_marginBottom="4dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnAllMedia" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_all_media" style="@style/Widget.Material3.Button.OutlinedButton"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ════════ PHONE ════════ -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            style="@style/Widget.Material3.CardView.Outlined">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/category_phone" android:textSize="18sp" android:textStyle="bold" android:layout_marginBottom="8dp"/>
+                <TextView android:id="@+id/tvPhoneStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/status_unknown" android:textSize="14sp" android:padding="8dp" android:background="@color/card_background" android:layout_marginBottom="8dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnCallPhone" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_call_phone" android:layout_marginBottom="4dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnReadPhoneState" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_read_phone_state" style="@style/Widget.Material3.Button.TonalButton" android:layout_marginBottom="4dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnReadCallLog" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_read_call_log" style="@style/Widget.Material3.Button.TonalButton" android:layout_marginBottom="4dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnAllPhone" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_all_phone" style="@style/Widget.Material3.Button.OutlinedButton"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ════════ SMS ════════ -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            style="@style/Widget.Material3.CardView.Outlined">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/category_sms" android:textSize="18sp" android:textStyle="bold" android:layout_marginBottom="8dp"/>
+                <TextView android:id="@+id/tvSmsStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/status_unknown" android:textSize="14sp" android:padding="8dp" android:background="@color/card_background" android:layout_marginBottom="8dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnSendSms" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_send_sms" android:layout_marginBottom="4dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnReadSms" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_read_sms" style="@style/Widget.Material3.Button.TonalButton" android:layout_marginBottom="4dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnReceiveSms" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_receive_sms" style="@style/Widget.Material3.Button.TonalButton" android:layout_marginBottom="4dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnAllSms" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_all_sms" style="@style/Widget.Material3.Button.OutlinedButton"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ════════ CONTACTS ════════ -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            style="@style/Widget.Material3.CardView.Outlined">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/category_contacts" android:textSize="18sp" android:textStyle="bold" android:layout_marginBottom="8dp"/>
+                <TextView android:id="@+id/tvContactsStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/status_unknown" android:textSize="14sp" android:padding="8dp" android:background="@color/card_background" android:layout_marginBottom="8dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnReadContacts" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_read_contacts" android:layout_marginBottom="4dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnWriteContacts" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_write_contacts" style="@style/Widget.Material3.Button.TonalButton" android:layout_marginBottom="4dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnAllContacts" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_all_contacts" style="@style/Widget.Material3.Button.OutlinedButton"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ════════ CALENDAR ════════ -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            style="@style/Widget.Material3.CardView.Outlined">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/category_calendar" android:textSize="18sp" android:textStyle="bold" android:layout_marginBottom="8dp"/>
+                <TextView android:id="@+id/tvCalendarStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/status_unknown" android:textSize="14sp" android:padding="8dp" android:background="@color/card_background" android:layout_marginBottom="8dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnReadCalendar" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_read_calendar" android:layout_marginBottom="4dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnWriteCalendar" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_write_calendar" style="@style/Widget.Material3.Button.TonalButton" android:layout_marginBottom="4dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnAllCalendar" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_all_calendar" style="@style/Widget.Material3.Button.OutlinedButton"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ════════ SENSORS & ACTIVITY ════════ -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            style="@style/Widget.Material3.CardView.Outlined">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/category_sensors" android:textSize="18sp" android:textStyle="bold" android:layout_marginBottom="8dp"/>
+                <TextView android:id="@+id/tvSensorsStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/status_unknown" android:textSize="14sp" android:padding="8dp" android:background="@color/card_background" android:layout_marginBottom="8dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnBodySensors" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_body_sensors" android:layout_marginBottom="4dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnActivityRecognition" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_activity_recognition" style="@style/Widget.Material3.Button.TonalButton" android:layout_marginBottom="4dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnSensorsAndActivity" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_sensors_and_activity" style="@style/Widget.Material3.Button.OutlinedButton"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ════════ BLUETOOTH ════════ -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            style="@style/Widget.Material3.CardView.Outlined">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/category_bluetooth" android:textSize="18sp" android:textStyle="bold" android:layout_marginBottom="8dp"/>
+                <TextView android:id="@+id/tvBluetoothStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/status_unknown" android:textSize="14sp" android:padding="8dp" android:background="@color/card_background" android:layout_marginBottom="8dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnBluetoothScan" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_bluetooth_scan" android:layout_marginBottom="4dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnBluetoothConnect" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_bluetooth_connect" style="@style/Widget.Material3.Button.TonalButton" android:layout_marginBottom="4dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnBluetoothAdvertise" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_bluetooth_advertise" style="@style/Widget.Material3.Button.TonalButton" android:layout_marginBottom="4dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnAllBluetooth" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_all_bluetooth" style="@style/Widget.Material3.Button.OutlinedButton"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ════════ NOTIFICATIONS ════════ -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            style="@style/Widget.Material3.CardView.Outlined">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/category_notifications" android:textSize="18sp" android:textStyle="bold" android:layout_marginBottom="8dp"/>
+                <TextView android:id="@+id/tvNotificationsStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/status_unknown" android:textSize="14sp" android:padding="8dp" android:background="@color/card_background" android:layout_marginBottom="8dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnPostNotifications" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_post_notifications"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ════════ NEARBY DEVICES ════════ -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            style="@style/Widget.Material3.CardView.Outlined">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/category_nearby" android:textSize="18sp" android:textStyle="bold" android:layout_marginBottom="8dp"/>
+                <TextView android:id="@+id/tvNearbyStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/status_unknown" android:textSize="14sp" android:padding="8dp" android:background="@color/card_background" android:layout_marginBottom="8dp"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnNearbyWifi" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_nearby_wifi"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ════════ FRAGMENT DEMO ════════ -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            style="@style/Widget.Material3.CardView.Outlined">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/section_fragment_demo" android:textSize="18sp" android:textStyle="bold" android:layout_marginBottom="8dp"/>
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/fragmentContainer"
+                    android:name="com.aneeque.permissionpilot.sample.SampleFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ════════ NAVIGATION ════════ -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            style="@style/Widget.Material3.CardView.Outlined">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnComposeDemo" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_open_compose_demo" android:layout_marginBottom="8dp" style="@style/Widget.Material3.Button.TonalButton"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnOpenSettings" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_open_settings" style="@style/Widget.Material3.Button.OutlinedButton"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>
